@@ -1,13 +1,9 @@
 {% extends "base.html" %} {% load static %}{% block title %}My Blog{% endblock %} 
 {% block css_files %}
+<link rel="stylesheet" href="{% static "blog/post.css" %}" />
 <link rel="stylesheet" href="{% static "blog/index.css" %}" />
 {% endblock  %}
 {% block content %}
-<header id="main-navigation">
-  <h1><a href="">Josh's Blog</a></h1>
-  <nav><a href="">All Posts</a></nav>
-</header>
-
 <section id="welcome">
   <header>
     <img src="{% static 'blog/images/josh.png' %}" alt="Josh - The Author of this Blog" />
@@ -22,18 +18,7 @@
 <section id="latest-posts">
   <h2>My Latest Thoughts</h2>
   <ul>
-    <li>
-      <article class="post">
-        <a href="">
-          <img src="{% static 'blog/images/mountains.jpg' %}" alt="Mountain Hiking" />
-          <div class="post__content">
-            <h3>Mountain Hiking</h3>
-            <p>There's nothing like the views you get when hiking in the mountains! Sometimes, you're never prepared for what happens whilst enjoying the views!
-            </p>
-          </div>
-        </a>
-      </article>
-    </li>
+    {% include "blog/includes/post.html" %}
   </ul>
 </section>
 
