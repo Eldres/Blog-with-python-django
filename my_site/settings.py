@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'blog',
+    'blog',  # tells Django to consider the specific app/module
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
