@@ -11,8 +11,8 @@
 </head>
 <body>
   <header id="main-navigation">
-    <h1><a href="">Josh's Blog</a></h1>
-    <nav><a href="">All Posts</a></nav>
+    <h1><a href="{% url 'index-page' %}">Josh's Blog</a></h1>
+    <nav><a href="{% url 'posts-page' %}">All Posts</a></nav>
   </header>
   {% block content %}{% endblock  %}
 </body>
