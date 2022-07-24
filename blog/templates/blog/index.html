@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% block title %}My Blog{% endblock %} 
+{% extends "base.html" %} {% load static %}{% block title %}My Blog{% endblock %} 
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock  %}
 {% block content %}
 <header id="main-navigation">
   <h1><a href="">Josh's Blog</a></h1>
@@ -7,7 +10,7 @@
 
 <section id="welcome">
   <header>
-    <img src="" alt="Josh - The Author of this Blog" />
+    <img src="{% static 'blog/images/josh.png' %}" alt="Josh - The Author of this Blog" />
     <h2>JOSH'S BLOG</h2>
   </header>
   <p>
@@ -22,18 +25,19 @@
     <li>
       <article class="post">
         <a href="">
-          <img src="" alt="Mountain Hiking" />
-          <div class='post__content'>
+          <img src="{% static 'blog/images/mountains.jpg' %}" alt="Mountain Hiking" />
+          <div class="post__content">
             <h3>Mountain Hiking</h3>
             <p>There's nothing like the views you get when hiking in the mountains! Sometimes, you're never prepared for what happens whilst enjoying the views!
             </p>
+          </div>
         </a>
       </article>
     </li>
   </ul>
 </section>
 
-<section id='about'>
+<section id="about">
   <h2>What I do</h2>
   <p>I love programming, learning about new technologies and hiking with my dogs!</p>
   <p>My goal is to keep growing as a developer - and being able to spend time with my family and my dogs!</p>
