@@ -10,5 +10,6 @@ urlpatterns = [
     path("all-posts", views.AllPostsView.as_view(), name="posts-page"),
     # load individual blog post page which shows full blog post
     # path('posts/<slug:slug>', views.post_detail, name='post-detail-page'),  # /posts/my-blog-post
-    path("posts/<slug:slug>", views.SinglePostView.as_view(), name="post-detail-page")
+    path("posts/<slug:slug>", views.SinglePostView.as_view(), name="post-detail-page"),
+    path("read-later", views.ReadLaterView.as_view(), name="read-later")
 ]
