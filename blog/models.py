@@ -1,5 +1,6 @@
 from tkinter import CASCADE
 from django.db import models
+from django.core.validators import MinLengthValidator
 
 # Create your models here.
 
@@ -28,7 +29,7 @@ class Post(models.Model):
     # image = models.FileField()
     image_name = models.CharField(max_length=100, default='')
     slug = models.SlugField(unique=True, allow_unicode=True)
-    content = models.TextField(default='')
+    content = models.TextField(default='', validators=[MinLengthValidator(10)])
     excerpt = models.CharField(max_length=250)
 
     def __str__(self):
