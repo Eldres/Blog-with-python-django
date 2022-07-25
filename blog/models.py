@@ -35,7 +35,7 @@ class Post(models.Model):
     excerpt = models.CharField(max_length=250)
 
     def __str__(self):
-        return f"{self.title} - {self.author} ({self.date}): {self.excerpt}"
+        return f"{self.title} - {self.author} ({self.date})"
 
 
 class Comment(models.Model):
