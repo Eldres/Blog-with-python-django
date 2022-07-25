@@ -23,7 +23,7 @@ class Tag(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100)
     tag = models.ManyToManyField(Tag)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name="posts", default='')
+    author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name="posts", default='')
     date = models.DateField(auto_now=True)
     # image = models.FileField()
     image_name = models.CharField(max_length=100, default='')
